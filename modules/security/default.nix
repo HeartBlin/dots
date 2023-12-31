@@ -1,6 +1,6 @@
 _: {
   imports = [
-    ./doas.nix
     ./gpg.nix
+    ./sudo.nix
   ];
 }

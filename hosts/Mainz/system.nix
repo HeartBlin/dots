@@ -13,7 +13,6 @@
 
     security = {
       gpg = true;
-      sudoToDoas = false; # Doas br0ke
     };
 
     system = {
