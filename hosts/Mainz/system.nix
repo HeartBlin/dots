@@ -12,7 +12,14 @@
     };
 
     security = {
+      # Sign git commits
       gpg = true;
+
+      # No touchy
+      mitigations = {
+        disable = false;
+        acceptRisk = false;
+      };
     };
 
     system = {
