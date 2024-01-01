@@ -1,6 +1,11 @@
-{ config, lib, pkgs, username, ... }:
-
-with lib; let 
+{
+  config,
+  lib,
+  pkgs,
+  username,
+  ...
+}:
+with lib; let
   cfg = config.configs.modules.security;
 in {
   options.configs.modules.security = {
@@ -13,7 +18,7 @@ in {
       pinentry-curses
     ];
 
-    home-manager.users.${username} = { pkgs, ... }@hm: {
+    home-manager.users.${username} = hm: {
       programs.gpg.enable = true;
       programs.gpg.homedir = "${hm.config.xdg.dataHome}/gnupg";
       home.file."${hm.config.programs.gpg.homedir}/.keep".text = "";
@@ -27,3 +32,4 @@ in {
     };
   };
 }
+

@@ -1,7 +1,10 @@
-{ inputs, nixpkgs, ...}: let
-
+{
+  inputs,
+  nixpkgs,
+  ...
+}: let
   username = "heartblin";
-  sharedArgs = { inherit inputs username; };
+  sharedArgs = {inherit inputs username;};
 
   hm = inputs.homeManager.nixosModules.home-manager;
 
@@ -16,25 +19,31 @@
   security = securityModules;
   system = systemModules;
 
-  homes = [ hm homePath ];
+  homes = [hm homePath];
 
   shared = [
     common
     security
     system
   ];
-in
-{
-  /* ROG Strix G513*/
+in {
+  /*
+  ROG Strix G513
+  */
   Mainz = nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
-    modules = [ 
-      { networking.hostName = "Mainz"; }
-      ./Mainz
-    ] ++ builtins.concatLists [shared homes];
+    modules =
+      [
+        {networking.hostName = "Mainz";}
+        ./Mainz
+      ]
+      ++ builtins.concatLists [shared homes];
 
     specialArgs = sharedArgs;
   };
 
-  /* TODO - others */
+  /*
+  TODO - others
+  */
 }
+

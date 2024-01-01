@@ -1,6 +1,9 @@
-{ inputs, username, pkgs, ... }:
-
 {
+  inputs,
+  username,
+  pkgs,
+  ...
+}: {
   configs.modules = {
     device = {
       gpu = "nvidia";
@@ -28,12 +31,11 @@
     };
   };
 
-
   ## TODO Refactor
-    
-  services.supergfxd.enable = true;
-  systemd.services.supergfxd.path = [ pkgs.pciutils ];
+
+  systemd.services.supergfxd.path = [pkgs.pciutils];
   services = {
+    supergfxd.enable = true;
     asusd = {
       enable = true;
       enableUserService = true;
@@ -60,13 +62,10 @@
   users.users.${username} = {
     isNormalUser = true;
     initialPassword = "changeme";
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = ["wheel"]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       firefox
       neovim
     ];
   };
-
-  system.stateVersion = "23.11"; # Did you read the comment?
 }
-

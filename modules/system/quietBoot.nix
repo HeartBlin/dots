@@ -1,6 +1,10 @@
-{ config, lib, pkgs, ... }:
-
-with lib; let 
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+with lib; let
   cfg = config.configs.modules.system;
 in {
   options.configs.modules.system = {
@@ -8,9 +12,11 @@ in {
   };
 
   config = mkIf cfg.quietBoot {
-    boot.initrd.systemd.enable = lib.mkForce true;
-    boot.plymouth.enable = true;
-    boot.plymouth.theme = "bgrt";
+    boot = {
+      initrd.systemd.enable = lib.mkForce true;
+      plymouth.enable = true;
+      plymouth.theme = "bgrt";
+    };
     environment.systemPackages = [
       pkgs.plymouth
     ];

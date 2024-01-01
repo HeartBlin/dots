@@ -1,18 +1,24 @@
-{ config, lib, pkgs, ... }:
-
-with lib; let 
-  mitigationFlags = ([
-    "noibrs"
-    "noibpb"
-    "nospectre_v1"
-    "nospectre_v2"
-    "l1tf=off"
-    "nospec_store_bypass_disable"
-    "no_stf_barrier"
-    "mds=off"
-  ]) ++ [
-    "mitigations=off"
-  ];
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+with lib; let
+  mitigationFlags =
+    [
+      "noibrs"
+      "noibpb"
+      "nospectre_v1"
+      "nospectre_v2"
+      "l1tf=off"
+      "nospec_store_bypass_disable"
+      "no_stf_barrier"
+      "mds=off"
+    ]
+    ++ [
+      "mitigations=off"
+    ];
 
   cfg = config.configs.modules.security;
 in {
@@ -31,17 +37,19 @@ in {
   };
 
   config = {
-    assertions = optionals cfg.mitigations.disable [{
-      assertion = cfg.mitigations.acceptRisk;
-      message = ''
-        You disabled mitigations!
+    assertions = optionals cfg.mitigations.disable [
+      {
+        assertion = cfg.mitigations.acceptRisk;
+        message = ''
+          You disabled mitigations!
 
-        Hopefully you understand how stupid this can be!
+          Hopefully you understand how stupid this can be!
 
-        Set 'config.modules.security.mitigations.acceptRisk' to 'true'
-        only if you know what you are doing!
-      '';
-    }];
+          Set 'config.modules.security.mitigations.acceptRisk' to 'true'
+          only if you know what you are doing!
+        '';
+      }
+    ];
 
     security = {
       protectKernelImage = true;
@@ -50,7 +58,7 @@ in {
       apparmor = {
         enable = true;
         killUnconfinedConfinables = true;
-        packages = [ pkgs.apparmor-profiles ];
+        packages = [pkgs.apparmor-profiles];
       };
     };
 
@@ -70,9 +78,11 @@ in {
         };
       };
 
-      kernelParams = [
-       "rootflags=noatime"
-      ] ++ optionals cfg.mitigations.disable mitigationFlags;
+      kernelParams =
+        [
+          "rootflags=noatime"
+        ]
+        ++ optionals cfg.mitigations.disable mitigationFlags;
 
       blacklistedKernelModules = lib.concatLists [
         [
@@ -138,3 +148,4 @@ in {
     };
   };
 }
+
