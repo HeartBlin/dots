@@ -31,11 +31,11 @@
         "yafas": "yafas"
       },
       "locked": {
-        "lastModified": 1704114663,
-        "narHash": "sha256-jQi2iY9+3T3YtZ+H+wRyYkYJMxDTw0LKLf1s4STs2mY=",
+        "lastModified": 1704312874,
+        "narHash": "sha256-D+ym+72VajwqKjsoq/vDjBWS6fN1i4Hel8hrbn+wiTY=",
         "owner": "chaotic-cx",
         "repo": "nyx",
-        "rev": "31aaacef5779df9fe0615bc9c475f32d8b72d943",
+        "rev": "60cb47327d96bba72811c9046b3fb388bb8af0a4",
         "type": "github"
       },
       "original": {
@@ -317,11 +317,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1704100519,
-        "narHash": "sha256-SgZC3cxquvwTN07vrYYT9ZkfvuhS5Y1k1F4+AMsuflc=",
+        "lastModified": 1704311514,
+        "narHash": "sha256-j6JsfCv31bW7LzV06q2L/27QZ4k1Zq7lEq2AR9R150A=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "6e91c5df192395753d8e6d55a0352109cb559790",
+        "rev": "fcbc70a7ee064f2b65dc1fac1717ca2a9813bbe6",
         "type": "github"
       },
       "original": {
@@ -339,11 +339,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1704130191,
-        "narHash": "sha256-eDdF+rJRSL+3vdzWfDMerIQMgXIl7p4GDLhn7NO2Xbk=",
+        "lastModified": 1704230318,
+        "narHash": "sha256-aYjwKz4ybEEGqG45xFlnQbb0eN5GUxj9NMRcEYBPT3w=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "37b76cd1caed209e20e0e353671abf6ba4346b42",
+        "rev": "1512b81126dd115f089fd21244692d92034c78f8",
         "type": "github"
       },
       "original": {
@@ -507,11 +507,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1704072190,
-        "narHash": "sha256-mFPGdmkwWRuRQ1WZ0ZoM5PROLHnzV1BDM6oRKxZoHro=",
+        "lastModified": 1704244428,
+        "narHash": "sha256-n3KZlxx1QS3919I1O77OhBouUeetlLpmQQcIx3dqAso=",
         "owner": "fufexan",
         "repo": "nix-gaming",
-        "rev": "ce0a28bdd09d04e85a4a49c6f6e64f2a0411b521",
+        "rev": "bd7442917422de061bcf61323b07abbb93bdb766",
         "type": "github"
       },
       "original": {
@@ -544,12 +544,12 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1703637592,
-        "narHash": "sha256-8MXjxU0RfFfzl57Zy3OfXCITS0qWDNLzlBAdwxGZwfY=",
-        "rev": "cfc3698c31b1fb9cdcf10f36c9643460264d0ca8",
-        "revCount": 563471,
+        "lastModified": 1703961334,
+        "narHash": "sha256-M1mV/Cq+pgjk0rt6VxoyyD+O8cOUiai8t9Q6Yyq4noY=",
+        "rev": "b0d36bd0a420ecee3bc916c91886caca87c894e9",
+        "revCount": 564493,
         "type": "tarball",
-        "url": "https://api.flakehub.com/f/pinned/NixOS/nixpkgs/0.1.563471%2Brev-cfc3698c31b1fb9cdcf10f36c9643460264d0ca8/018cba6b-15b2-7220-9cfe-6686400021db/source.tar.gz"
+        "url": "https://api.flakehub.com/f/pinned/NixOS/nixpkgs/0.1.564493%2Brev-b0d36bd0a420ecee3bc916c91886caca87c894e9/018cc6b0-680d-7f16-b194-dbf948b62871/source.tar.gz"
       },
       "original": {
         "type": "tarball",
@@ -615,11 +615,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1704129230,
-        "narHash": "sha256-XreCdnqDt90pl9XEKKCAqF2T3ragavLWDCH8RqC4YiA=",
+        "lastModified": 1704316441,
+        "narHash": "sha256-Bqo4j0Jrjaj4l00R+hc+k+z4ZaHwLVuN2ncfHL9zxb4=",
         "owner": "nix-community",
         "repo": "nixpkgs-wayland",
-        "rev": "a06fbdbd36cfb64363db8368fec06cdbe8812794",
+        "rev": "91e63a4b810ceed4db7b5ba5f6c4b23e4045ea36",
         "type": "github"
       },
       "original": {
@@ -710,11 +710,11 @@
     },
     "nixpkgs_7": {
       "locked": {
-        "lastModified": 1703637592,
-        "narHash": "sha256-8MXjxU0RfFfzl57Zy3OfXCITS0qWDNLzlBAdwxGZwfY=",
+        "lastModified": 1703961334,
+        "narHash": "sha256-M1mV/Cq+pgjk0rt6VxoyyD+O8cOUiai8t9Q6Yyq4noY=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "cfc3698c31b1fb9cdcf10f36c9643460264d0ca8",
+        "rev": "b0d36bd0a420ecee3bc916c91886caca87c894e9",
         "type": "github"
       },
       "original": {
