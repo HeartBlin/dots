@@ -5,6 +5,7 @@
     #./ags.nix
     #./firefox.nix
     ./hyprland.nix
+    ./hyprpaper.nix
     ./msedge.nix
   ];
 

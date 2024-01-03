@@ -23,6 +23,9 @@
     # Hyprland - Wayland compositor
     hyprland.url = "github:hyprwm/Hyprland";
 
+    # Hyprpaper - Wayland wallpaper
+    hyprpaper.url = "github:hyprwm/hyprpaper/ef0e051255af1b96155b222da94c94ecad1f7708";
+
     # home-manager - Allow nix to manage /home
     homeManager.url = "github:nix-community/home-manager";
     homeManager.inputs.nixpkgs.follows = "nixpkgs";

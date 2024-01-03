@@ -27,7 +27,7 @@ exec-once = swww init; swww kill; swww init
 exec-once = dbus-update-activation-environment --all &
 exec-once = sleep 1 && dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec-once = ${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store &
-exec-once = ags
+exec-once = randomBg
 
 /* Misc options */
 misc {
@@ -150,6 +150,7 @@ bind = $mod Shift, F, fullscreen
 bind = $mod, Space, exec, ${pkgs.wofi}/bin/wofi --show drun
 bind = $mod, P, pseudo, # dwindle
 bind = $mod, J, togglesplit, # dwindle
+bind = $mod Shift, W, exec, randomBg 
 
 /* Open common apps */
 bind = $mod, W, exec, microsoft-edge-dev
