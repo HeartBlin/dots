@@ -1,15 +1,16 @@
 {
   description = "NixOS configuration";
 
-  outputs = {nixpkgs, ...} @ inputs: {
+  outputs = {nixpkgs, nixpkgsStable, ...} @ inputs: {
     nixosConfigurations = import ./hosts {
       inherit (nixpkgs) lib;
-      inherit inputs nixpkgs;
+      inherit inputs nixpkgs nixpkgsStable;
     };
   };
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgsStable.url = "github:nixos/nixpkgs/nixos-23.11";
     nixpkgsWayland.url = "github:nix-community/nixpkgs-wayland";
     nixpkgsWayland.inputs.nixpkgs.follows = "nixpkgs";
 

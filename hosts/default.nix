@@ -27,9 +27,7 @@
     system
   ];
 in {
-  /*
-  ROG Strix G513
-  */
+  #ROG Strix G513
   Mainz = nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
     modules =

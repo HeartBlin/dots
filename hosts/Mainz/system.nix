@@ -8,6 +8,7 @@
     device = {
       gpu = "nvidia";
       cpu = "amd";
+      hasBluetooth = true;
     };
 
     programs = {
